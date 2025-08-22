@@ -1,0 +1,9 @@
+The Postgres database information is as follows:
+
+Source Name: DE-RDS
+HOST: de-rds.czm23kqmbd6o.ca-central-1.rds.amazonaws.com
+Port: 5432
+Database Name: tpcds
+Optional fields -> Schemas: raw_st
+Username: postgres
+Password: weclouddatade

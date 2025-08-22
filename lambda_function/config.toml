@@ -1,0 +1,11 @@
+[s3]
+url = "https://de-materials-tpcds.s3.ca-central-1.amazonaws.com/inventory.csv"
+
+[snowflake]
+account = "JZAKNAG-SYC78490"
+user = "MATZO77"
+role = "ACCOUNTADMIN"
+warehouse = "WCD_PRJ"
+database = "WCD_ANALYTIC_ENG_CAPSTONE"
+schema = "RAW"
+table = "INVENTORY"
