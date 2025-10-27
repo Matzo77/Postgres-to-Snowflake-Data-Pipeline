@@ -1,16 +1,25 @@
-Data Ingestion:
-    1. Create the Lambda function, change permission to give AmazonS3FullAccess
-    2. Upload the Lambda layer to the Lambda function
-    3- Set up the snowflake database, schema and table for the file uploaded by Lambda
-    4- Change the information in the config.toml file for your own snowflake account
-    5- Set up the snowflake password as an environment variable in Lambda 
-    6- Create an Eventbridge rule and target the Lambda function to run everyday at a given time (e.g. 2 AM EST)
-    7- Set up the connection from Postgres (see postgres.txt) to Snowflake using Airbyte (Airbyte should be installed either on EC2 instance or locally)
-Transformation:
-    8- Install and set up dbt for transformation, initiate dbt in the project directory and install snowflake connector (Either locally or on EC2)
-    9- Edit the project.yml and source.yml files as required
-    10- Set up the required macros (custome schema name for example)
-    11- Set up your staging models, snapshots, intermediate models and mart models
-Visualisation:
-    12- Run Metabase container (installed either locally or on EC2)
-    13- Connect to snowflake database and create the required visualizations
+## Data Ingestion
+
+1. Create the Lambda function, and give it **AmazonS3FullAccess** permission.  
+2. Upload the Lambda layer to the function.  
+3. Set up the **Snowflake** database, schema, and table for the file uploaded by Lambda.  
+4. Update the `config.toml` file with your own Snowflake account details.  
+5. Set the Snowflake password as an environment variable in Lambda.  
+6. Create an **EventBridge rule** targeting the Lambda function to run daily (e.g., 2 AM EST).  
+7. Set up the connection from **Postgres → Snowflake** using **Airbyte** (installed on EC2 or locally).
+
+---
+
+## Transformation
+
+8. Install and set up **dbt** for transformation, initialize it in the project directory, and install the Snowflake connector.  
+9. Edit the `project.yml` and `source.yml` files as required.  
+10. Set up the required macros (e.g., custom schema name).  
+11. Create your staging models, snapshots, intermediate models, and mart models.
+
+---
+
+## Visualization
+
+12. Run a **Metabase** container (either locally or on EC2).  
+13. Connect to Snowflake and build your dashboards/visualizations.
